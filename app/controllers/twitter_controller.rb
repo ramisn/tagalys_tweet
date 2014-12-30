@@ -8,12 +8,10 @@ class TwitterController < ApplicationController
 	end
 
 	def generate_twitter_oauth_url
-		oauth_callback = "http://#{request.host}:#{request.port}/tweets"
-
 		@consumer = OAuth::Consumer.new("mU6uh3E6AkPxIEP1weAYklrmg","8JhsHFvirywD2rUkMJZofMv9b8Nb7oivzxvGIoKltaOtPWhJRd", :site => "https://api.twitter.com")
-
   	@request_token = @consumer.get_request_token(:oauth_callback => oauth_callback)
 		session[:request_token] = @request_token
+		oauth_callback = "http://#{request.host}:#{request.port}/tweets"
 
 		#redirect_to @request_token.authorize_url(:oauth_callback => oauth_callback)
 		redirect_to "/tweets"
