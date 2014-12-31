@@ -1,4 +1,4 @@
-== Tagalys Twitter Application
+* Tagalys Twitter Application
 
 * Ruby 2.0.0
 
