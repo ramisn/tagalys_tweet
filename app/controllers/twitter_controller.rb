@@ -2,9 +2,6 @@ class TwitterController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		# unless TwitterOauthSetting.find_by_user_id(current_user.id).nil?
-  #     redirect_to "/tweets"
-  #   end
 	end
 
 	def generate_twitter_oauth_url
@@ -13,7 +10,6 @@ class TwitterController < ApplicationController
   	@request_token = @consumer.get_request_token(:oauth_callback => oauth_callback)
 		session[:request_token] = @request_token
 		redirect_to @request_token.authorize_url(:oauth_callback => oauth_callback)
-		#redirect_to "/tweets"
 	end
 
   def tweets
