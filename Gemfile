@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -21,6 +21,7 @@ gem 'twitter', '~> 5.11.0'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'simple_form'
+gem 'rails_12factor'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
