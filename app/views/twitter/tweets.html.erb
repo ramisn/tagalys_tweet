@@ -44,21 +44,25 @@
       </tr>
       <% if params[:q] %>
       <% @search.each do |t| %>
+       <% cache(t) do %> 
        <tr>
          <th><%= t.user.screen_name %></th>
          <th><img src="<%= t.user.profile_image_url %>" /></th>
          <th><%= t.text %></th>
          <th><%= t.retweet_count %></th>
        </tr>
+       <% end %>
       <% end %>
       <% else %>
       <% @search.each do |t| %>
+      <% cache(t) do %> 
        <tr>
          <th><%= t.user_name %></th>
          <th><img src="<%#= t.profile_img %>"></th>
          <th><%= t.tweet %></th>
          <th><%= t.rt_count %></th>
        </tr>
+      <% end %> 
       <% end %>
       <% end %>
   </table>

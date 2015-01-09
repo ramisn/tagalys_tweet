@@ -1,6 +1,6 @@
 class TwitterController < ApplicationController
 	before_filter :authenticate_user!
-
+	caches_page :index, :tweets
 	def index
 	end
 

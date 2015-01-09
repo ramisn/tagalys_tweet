@@ -22,6 +22,8 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'simple_form'
 gem 'rails_12factor'
+gem 'actionpack-page_caching'
+gem 'rails-observers'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
